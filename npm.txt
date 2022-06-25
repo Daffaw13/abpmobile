@@ -1,0 +1,47 @@
+npm ERR! code ERR_SOCKET_TIMEOUT
+npm ERR! errno ERR_SOCKET_TIMEOUT
+npm ERR! network Invalid response body while trying to fetch https://registry.npmjs.org/mini-css-extract-plugin: Socket timeout
+npm ERR! network This is a problem related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Daffa\AppData\Local\npm-cache\_logs\2022-06-21T07_33_23_014Z-debug-0.log
+
+// bisa menggunakan ini terlebih dahulu 
+// npm config set registry "http://registry.npmjs.org" --global
+
+// apa bila keluar seperti ini 
+npm ERR! code ERR_SOCKET_TIMEOUT
+npm ERR! network Socket timeout
+npm ERR! network This is a problem related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Daffa\AppData\Local\npm-cache\_logs\2022-06-21T08_01_36_089Z-debug-0.log
+
+// maka gunakan ini 
+// - npm config rm proxy
+// - npm config rm https-proxy
+// kalau masih sama maka gunakan ini 
+// npm config set fetch-retry-mintimeout 20000
+// npm config set fetch-retry-maxtimeout 120000
+// npm cache verify
+// npm cache clean --force
+
+Windown + r
+
+Type appwiz.cpl and click OK
+
+click on Turn window features on or off (on the Left top side)
+
+wait some seconds and check the Internet information service option
+
+Now wait until window apply changes.
+
+create project again.
